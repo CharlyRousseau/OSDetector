@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Clonage du dépot github') {
 			steps {
-				git branch: `main`, url: 'https://github.com/CharlyRousseau/OSDetector.git'
+				git branch: 'main', url: 'https://github.com/CharlyRousseau/OSDetector.git'
 			}
 		}
 	}
