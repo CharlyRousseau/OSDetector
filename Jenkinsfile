@@ -24,16 +24,14 @@ pipeline {
     }
     post {
         success {
-            emailext subject: "Build SUCCESS - OSDetector",
-                     body: "La build Jenkins s'est terminée avec succès.",
-                     to: "charlesdevif@hotmail.fr",
-                     attachLog: true
+            mail to: 'charlesdevif@hotmail.fr',
+             subject: "Succès de la build Jenkins",
+             body: "La build Jenkins s'est terminée avec succès."
         }
         failure {
-            emailext subject: "Build FAILURE - OSDetector",
-                     body: "La build Jenkins a échoué. Consultez les logs.",
-                     to: "charlesdevif@hotmail.fr",
-                     attachLog: true
+            mail to: 'charlesdevif@hotmail.fr',
+             subject: "Succès de la build Jenkins",
+             body: "La build Jenkins s'est terminée avec succès."
         }
     }
 }
