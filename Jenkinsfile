@@ -22,4 +22,18 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            emailext subject: "Build SUCCESS - OSDetector",
+                     body: "La build Jenkins s'est terminée avec succès.",
+                     to: "charlesdevif@hotmail.fr",
+                     attachLog: true
+        }
+        failure {
+            emailext subject: "Build FAILURE - OSDetector",
+                     body: "La build Jenkins a échoué. Consultez les logs.",
+                     to: "charlesdevif@hotmail.fr",
+                     attachLog: true
+        }
+    }
 }
