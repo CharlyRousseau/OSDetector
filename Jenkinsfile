@@ -9,8 +9,8 @@ pipeline {
         stage('Installation de Python 3.11 et pip') {
             steps {
                 sh '''
-                    sudo apt update
-                    sudo apt install -y python3.11 python3.11-venv python3-pip
+                    apt update
+                    apt install -y python3.11 python3.11-venv python3-pip
                 '''
             }
         }
